@@ -38,16 +38,12 @@ Now that the data is in the computer-readable format, we can prepare the model t
 We will use Linear, Ridge, and Lasso Regressions. Remember, we still need to scale or normalize our data, which contains the variation. We will do both scaling and modeling subsequently using the Sklearn pipeline. We are to run many combinations to build an effective model. In the Jupyter notebook review, the various pipeline constructed and the Loss Function for each combination. We have split the data into train and test sets of 7:3 ratio. Used training data to construct the model and test data to calculate the Loss function. 
 
 * **Evaluation** 
-After the model, we are to analyze the coefficient of the features considered by the model. Think of the coefficient as the way the model tells which features/columns are to be given importance during prediction. The features coefficient will help the dealer to understand what factors are essential for the used cars. 
+After the model, we are to analyze the coefficient of the features considered by the model. Think of the coefficient as the way the model tells which features/columns are to be given importance during prediction. The features coefficient will help the dealer to understand what factors are essential for the used cars. Loss functions help understand the accuracy of the model and how far off is the prediction of the model given the test data. Looking at the MSE, MAE, and RMSE of the scaled models, the loss functions seem related. 
 ***Based on the plot, the odometer, manufacturer, transmission, age, and size are the most critical features that constitute the price of the used cars.*** 
 
-Loss functions helps understand the accuracy of the model and how far off is the prediction of the model given the test data. Looking at the MSE, MAE, and RMSE of the three models that were scaled, the loss functions seems related. 
-
 * **Next steps and consideration** 
-    * While reading the couple of online article about other models, it seems that KNN model can help better predict such scenario than any other model. So, it will be worth time looking at the Loss function of the KNN model. 
-    * The dependent/target column price isn't scaled. We should recontruct the model and calculate the Loss functions after scaling the price column. 
+    * Reading a couple of online articles about other models, the KNN model can help better predict such a scenario than any other model. So, it will be worth looking at the KNN model's loss function. 
+    * The dependent/target column price is not scaled. After scaling the price column, we should reconstruct the model and calculate the Loss functions. 
     * We should consider plotting the distribution plot of the raw data using the distplot library. 
-    * In the current process, we ran the combination of models separetely. Using the Gridsearch & Makepipe Sklearn libraries, we should plan to reduce the number of lines in the code. 
-    * 
-
-
+    * In the current process, we ran the combination of models separately. Using the Gridsearch & Makepipe Sklearn libraries, we should reduce the number of lines in the code. 
+    * While plotting the predicted value and test data, I noticed some discrepancies, so it will be worth understanding the cause and reconstructing the model.
