@@ -50,4 +50,5 @@ After the model, we are to analyze the coefficient of the features considered by
     * Removing outliers from the data and reconstructing the models. 
     * Remvoving duplicates from the data. 
     * Would introducing PCA to reduce the dimensionality of the data improve the model accuracy? 
+    * Use different Transfomers like OrdinalTransformer and OneHotEncoding. 
 
