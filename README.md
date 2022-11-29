@@ -42,8 +42,11 @@ After the model, we are to analyze the coefficient of the features considered by
 ***Based on the plot, the odometer, manufacturer, transmission, age, and size are the most critical features that constitute the price of the used cars.*** 
 
 * **Next steps and consideration** 
-    * Reading a couple of online articles about other models, the KNN model can help better predict such a scenario than any other model. So, it will be worth looking at the KNN model's loss function. 
+    * Reading a couple of online articles about other models, the KNN & Random Forest model can help better predict such a scenario than any other model. So, it will be worth looking at the KNN model's loss function. 
     * The dependent/target column price is not scaled. After scaling the price column, we should reconstruct the model and calculate the Loss functions. 
     * We should consider plotting the distribution plot of the raw data using the distplot library. 
     * In the current process, we ran the combination of models separately. Using the Gridsearch & Makepipe Sklearn libraries, we should reduce the number of lines in the code. 
     * While plotting the predicted value and test data, I noticed some discrepancies, so it will be worth understanding the cause and reconstructing the model.
+    * Removing outliers from the data and reconstructing the models. 
+    * Remvoving duplicates from the data. 
+    
