@@ -38,7 +38,6 @@ Now that the data is in the computer readable format, we can prepare the model t
 We will use Linear, Ridge, and Lasso Regressions. Remember we haven't scaled or normalized our data yet and it still contains the variation. We will do both scaling and modeling subsequently using the Sklearn pipeline. We are to run many combinations to build the effective model. In the Jupyter noetbook review the various pipeline construted and for each combination the Loss Function. We have splitted the data into train and test sets of 7:3 ratio. Used training data to construct the model and test data to calculate the Loss function. 
 
 * **Evaluation** 
-
 After the model is built, we are to analyze the coefficent of the features considered by the model. Think of the coefficent as the way of the model to tell which features/columns are to be given importance during prediction. The features coefficent will help the dealer to understand what factors are important for the used cars. 
 Based on the plot, it seems odometer, transmission, age, and size are the most important features that consitutes to the price of the used cars. 
 
