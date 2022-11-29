@@ -31,10 +31,16 @@ Another factor to consider in the data preparation is about fixing the variation
     * Categorical features 
         * Filling in the missing values in the categorical data will be tricky as we will need a transformer that can treat the non-numeric columns like the one we used in the case of numeric features However, I don't think such library exists. So, to address the missing values, we will first transform the column to the numeric (maybe using OneHot encoding, LabelEncoder, OrdinalEncoder), then apply Imputing on the features i.e. Transform -> Impute. 
         The encoder fails if you have the missing value so now what we do? The approach now is to keep the null/empty rows out of the transformation logic, apply the desired transformation, and put the null rows back. i.e. Keep empty rows aside -> Transform the data -> place the null rows back -> Impute. We will use LabelEncoder and IterativeImputer to transform the categorical features holistically. 
-    * The last step is to normalize the data as it consists of huge variation. We used MixMaxScaler of Sklearn to accomplish it. 
+    * The last step is to normalize the data as it consists of huge variation but we will do it while building the model. 
 Now that the data is in the computer readable format, we can prepare the model to perform the analysis. 
 
 * **Modeling** preparing the maching learning model that will attain the goal of this project. 
+We will use Linear, Ridge, and Lasso Regressions. Remember we haven't scaled or normalized our data yet and it still contains the variation. We will do both scaling and modeling subsequently using the Sklearn pipeline. We are to run many combinations to build the effective model. In the Jupyter noetbook review the various pipeline construted and for each combination the Loss Function. We have splitted the data into train and test sets of 7:3 ratio. Used training data to construct the model and test data to calculate the Loss function. 
+
+* **Evaluation** 
+
+After the model is built, we are to analyze the coefficent of the features considered by the model. Think of the coefficent as the way of the model to tell which features/columns are to be given importance during prediction. The features coefficent will help the dealer to understand what factors are important for the used cars. 
+Based on the plot, it seems odometer, transmission, age, and size are the most important features that consitutes to the price of the used cars. 
 
 
 
