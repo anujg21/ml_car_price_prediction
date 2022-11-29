@@ -5,9 +5,9 @@ We are provided with the used car data consists of 18 features and 426k rows. Th
 
 It is practically challening for human to analyze such a huge dataset for making a decision hence, we need the solution that can take big dataset and conclude the analysis faster. What could be a better alternative than computers with decent CPU and memory? We will plan to use the supervised machine learning algorithms for the condusive analysis.
 
-As with any human would do, the Machine learning(ML) algorithm need to understand the data beforehand to make any smarter decision. The jupyter notebook (used_car_price_model.ipynb) is used to instruct the computer to perform the ML analysis. In the subsequent read you will get how using CRISP-DM framework we came up with the model to make the analysis of used car easy. 
+As with any human would do, the Machine learning(ML) algorithm need to understand the data beforehand to make any smarter decision. The jupyter notebook (used_car_price_model.ipynb) is used to instruct the computer to perform the ML analysis. In the subsequent read you will get how using CRISP-DM framework we came up with the model to make the analysis of used car easy.
 
-* Data Understanding
+* **Data Understanding**
 To understand the data, we plotted various combination of the variables (columns) to see how the data is distributed. Looking closely at the plots, you will notice 
 
     * The data is unequally distributed with varying mean and standard deviation. 
@@ -20,7 +20,7 @@ To understand the data, we plotted various combination of the variables (columns
     * The data consists of both categorical and numeric columns thus the correlation didn't reveal noticeable information. Except for the fact that there was moderate negative relationship between the year and odometer. 
     * It was important to identify null/empty rows because having the missig value will not help with the analysis. We used msno library to plot the missing value in the data and to the surprise, there are many missing values. 
 
-* Data Preparation
+* **Data Preparation**
 As highlighted in the data understanding, the data consists of both numeric and categorical data. Humans are good with the non-numeric data however, the computers aren't. The computers understand the numeric input thus we will have to convert the categorical columns/features into the computer readable format. 
 Another factor to consider in the data preparation is about fixing the variation in the data. The minimum, maximum, mean and std are varying vastly for the numeric columns. Thus we need to fix this variation for the computer or ML model to weigh the appropriately. 
 
@@ -34,7 +34,7 @@ Another factor to consider in the data preparation is about fixing the variation
     * The last step is to normalize the data as it consists of huge variation. We used MixMaxScaler of Sklearn to accomplish it. 
 Now that the data is in the computer readable format, we can prepare the model to perform the analysis. 
 
-* Modeling / preparing the maching learning model that will attain the goal of this project. 
+* **Modeling** preparing the maching learning model that will attain the goal of this project. 
 
 
 
