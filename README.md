@@ -49,4 +49,5 @@ After the model, we are to analyze the coefficient of the features considered by
     * While plotting the predicted value and test data, I noticed some discrepancies, so it will be worth understanding the cause and reconstructing the model.
     * Removing outliers from the data and reconstructing the models. 
     * Remvoving duplicates from the data. 
-    
+    * Would introducing PCA to reduce the dimensionality of the data improve the model accuracy? 
+
